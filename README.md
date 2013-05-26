@@ -53,6 +53,6 @@ _welcomeMessage = format["Welcome to EPM Gamings's GB 500 #2 Server %1, Enjoy yo
 
 Edit this line.
 
-
+<b><u>Finaly</u></b>
 - Run build.bat (It will create the .pbo's)
 - Copy all the files from DEPLOY into your folder. (Make sure to maintain the same file structure)
