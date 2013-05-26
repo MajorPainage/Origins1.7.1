@@ -17,8 +17,6 @@ All credit goes to Cortez for all the hard work to make this mod available.
 - Copy the Addons folder from the Arma 2 folder into the same folder.
 - Copy the map (@DayzOrigins) into the same folder. (Downloaded from Dayz Commander or other tool)
 - Install the latest OA Beta Patch (http://www.arma2.com/beta-patch.php)
-- Run build.bat (It will create the .pbo's)
-- Copy all the files from DEPLOY into your folder. (Make sure to maintain the same file structure)
 - Edit the following files:<br>
 --- \dayz_1.origins.tavi\config.cfg<br>
 --- \dayz_1.origins.tavi\HiveExt.ini<br>
@@ -54,3 +52,7 @@ _welcomeMessage = format["Welcome to EPM Gamings's GB 500 #2 Server %1, Enjoy yo
 </pre>
 
 Edit this line.
+
+<b><u>Finaly</u></b>
+- Run build.bat (It will create the .pbo's)
+- Copy all the files from DEPLOY into your folder. (Make sure to maintain the same file structure)
