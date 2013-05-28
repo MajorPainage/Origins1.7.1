@@ -10,6 +10,8 @@ All credit goes to Cortez for all the hard work to make this mod available.
 - Import \sqlfile\1_dayz_origins.sql into your database
 - Run a SQL Query of the contents of \sqlfile\2_dayz_origins_vehicle_fix.sql
 
+(NOTE:  If your having issues installing the functions, and get a message saying you don't have permission to install, you must install the functions as a 'root' user)
+
 
 <u><b>Installing Files:</b></u>
 
