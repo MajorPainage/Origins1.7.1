@@ -11,7 +11,7 @@ ECHO.
 PAUSE
 ECHO Creating DEPLOY\@dayz_1.origins.tavi\addons
 IF NOT EXIST DEPLOY\@dayz_1.origins.tavi\addons mkdir DEPLOY\@dayz_1.origins.tavi\addons
-tools\cpbo.exe -p @dayz_1.origins.tavi\addons DEPLOY\@dayz_1.origins.tavi\addons\dayz_server.pbo
+tools\cpbo.exe -p @dayz_1.origins.tavi\addons\dayz_server DEPLOY\@dayz_1.origins.tavi\addons\dayz_server.pbo
 ECHO.
 PAUSE
 ECHO.
