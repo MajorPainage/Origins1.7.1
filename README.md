@@ -3,6 +3,11 @@ DayZ Origins community build
 
 All credit goes to Cortez for all the hard work to make this mod available.
 
+<u><b>Tools Required</b></u>
+
+- PBO tool which can be found in the tools folder.
+(PBO Manager is the better of the two)
+
 
 <u><b>Installing Database:</b></u>
 
@@ -55,6 +60,8 @@ _welcomeMessage = format["Welcome to EPM Gamings's GB 500 #2 Server %1, Enjoy yo
 
 Edit this line.
 
-<b><u>Finally</u></b>
-- Run build.bat (It will create the .pbo's)
-- Copy all the files from DEPLOY into your folder. (Make sure to maintain the same file structure)
+
+- Copy all the files from your git download into your folder. (Make sure to maintain the same file structure)
+- Install your PBO tool if you haven't already.
+- Use the PBO tool to pack the \@dayz_1.origins.tavi\addons\dayz_server folder.
+(NOTE:  You can also pack the folder in the MPMissions folder, but it isn't required)
