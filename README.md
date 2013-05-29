@@ -16,7 +16,7 @@ All credit goes to Cortez for all the hard work to make this mod available.
 <u><b>Installing Files:</b></u>
 
 - Install the latest OA Beta Patch (http://www.arma2.com/beta-patch.php)
-- Create a new folder copy the files from Operation Arrowhead folder into it. (This help retain your original files if you have to start over)
+- Create a new folder copy the files from the OA folder into it. (This help retains your original files if you have to start over)
 - Copy the Addons folder from the Arma 2 folder into the same folder.
 - Copy the map (@DayzOrigins) into the same folder. (Downloaded from Dayz Commander or other tool)
 - Edit the following files:<br>
