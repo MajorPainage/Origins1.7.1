@@ -5,7 +5,7 @@ OnLoadIntro = "Welcome to DayzOrigins";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
-disableChannels[]={0,2,6};
+disableChannels[]={0,6};
 enableItemsDropping = 0;
 loadScreen = "\z\addons\dayz_code\gui\DayzOrigins.paa";
 class Header
