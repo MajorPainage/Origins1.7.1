@@ -69,3 +69,4 @@ if (!isDedicated) then {
 	_nul = [] execVM "Camera\loginCamera.sqf";
 
 };
+[3,true,true,3] execFSM "core_time.fsm";
