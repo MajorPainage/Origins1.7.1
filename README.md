@@ -15,10 +15,10 @@ All credit goes to Cortez for all the hard work to make this mod available.
 
 <u><b>Installing Files:</b></u>
 
-- Create a folder containing the files from Operation Arrowhead.
+- Install the latest OA Beta Patch (http://www.arma2.com/beta-patch.php)
+- Create a new folder copy the files from Operation Arrowhead folder into it. (This help retain your original files if you have to start over)
 - Copy the Addons folder from the Arma 2 folder into the same folder.
 - Copy the map (@DayzOrigins) into the same folder. (Downloaded from Dayz Commander or other tool)
-- Install the latest OA Beta Patch (http://www.arma2.com/beta-patch.php)
 - Edit the following files:<br>
 --- \dayz_1.origins.tavi\config.cfg<br>
 --- \dayz_1.origins.tavi\HiveExt.ini<br>
