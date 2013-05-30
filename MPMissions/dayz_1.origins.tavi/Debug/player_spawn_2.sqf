@@ -351,9 +351,43 @@ while {true} do {
             _humanity =             player getVariable["humanity",0];
             _zombies =              count entities "zZombie_Base";
             _zombiesA =     {alive _x} count entities "zZombie_Base";
+			
+	_combattimeout = player getVariable["combattimeout",0];
+	if (_combattimeout > 0) then {
+		_timeleft = _combattimeout - time;
+		if (_timeleft > 0) then {
+			_color = "color='#ff0000'";
+			//hintSilent format["In Combat: %1",round(_timeleft)];
+			_pmon1 = parseText format["Player Status: <br/><br/>Bandits Killed: %1<br/>Heroes Killed: %2<br/>Murders: %3<br/>Zombies Killed: %4<br/>Humanity: %5<br/><br/><t %6>In Combat: %7</t>",_killsB,_headShots,_killsH,_kills,_humanity,_color,round(_timeleft)];
+			hintSilent _pmon1;
+		} else {
+			//hintSilent "Not in Combat";
+			_color = "color='#99bb00'";
+			_pmon1 = parseText format["Player Status: <br/><br/>Bandits Killed: %1<br/>Heroes Killed: %2<br/>Murders: %3<br/>Zombies Killed: %4<br/>Humanity: %5<br/><br/><t %6>Not In Combat</t>",_killsB,_headShots,_killsH,_kills,_humanity,_color];
+			
+			hintSilent _pmon1;
+
+			player setVariable["combattimeout", 0, true];
+			dayz_combat = 0;
+			_combatdisplay = uiNamespace getVariable 'DAYZ_GUI_display';
+			_combatcontrol = 	_combatdisplay displayCtrl 1307;
+			_combatcontrol ctrlShow true;
+		};
+	} else {
+		//hintSilent "Not in Combat";
+		_color = "color='#99bb00'";
+		_pmon1 = parseText format["Player Status: <br/><br/>Bandits Killed: %1<br/>Heroes Killed: %2<br/>Murders: %3<br/>Zombies Killed: %4<br/>Humanity: %5<br/><br/><t %6>Not In Combat</t>",_killsB,_headShots,_killsH,_kills,_humanity,_color];
+		
+		hintSilent _pmon1;
+		dayz_combat = 0;
+		_combatdisplay = uiNamespace getVariable 'DAYZ_GUI_display';
+		_combatcontrol = 	_combatdisplay displayCtrl 1307;
+		_combatcontrol ctrlShow true;
+	};
+
 
                     hintSilent parseText format ["
-	<t size='1.15' font='Bitstream' color='#5882FA'>Visit: www.epm-gaming.co.uk</t><br/><br/>				
+	<t size='1.15' font='Bitstream' color='#5882FA'>Visit: www.aaquacks.com</t><br/><br/>				
 	<t size='1.15' font='Bitstream' color='#5882FA'>Survived %7 Days</t><br/>
 	<t size='0.95' font='Bitstream' align='left'>Players Online: </t><t size='0.95 'font='Bitstream' align='right'>%12</t><br/>
 	<t size='0.95' font='Bitstream' align='left'>Murders: </t><t size='1.15' font='Bitstream' align='right'>%4</t><br/>

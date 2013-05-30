@@ -3,6 +3,11 @@ DayZ Origins community build
 
 All credit goes to Cortez for all the hard work to make this mod available.
 
+<u><b>Tools Required</b></u>
+
+- PBO tool which can be found in the tools folder.
+(PBO Manager is the better of the two)
+
 
 <u><b>Installing Database:</b></u>
 
@@ -10,13 +15,15 @@ All credit goes to Cortez for all the hard work to make this mod available.
 - Import \sqlfile\1_dayz_origins.sql into your database
 - Run a SQL Query of the contents of \sqlfile\2_dayz_origins_vehicle_fix.sql
 
+(NOTE:  If your having issues installing the functions, and get a message saying you don't have permission to install, you must install the functions as a 'root' user)
+
 
 <u><b>Installing Files:</b></u>
 
-- Create a folder containing the files from Operation Arrowhead.
+- Install the latest OA Beta Patch (http://www.arma2.com/beta-patch.php)
+- Create a new folder copy the files from the OA folder into it. (This help retains your original files if you have to start over)
 - Copy the Addons folder from the Arma 2 folder into the same folder.
 - Copy the map (@DayzOrigins) into the same folder. (Downloaded from Dayz Commander or other tool)
-- Install the latest OA Beta Patch (http://www.arma2.com/beta-patch.php)
 - Edit the following files:<br>
 --- \dayz_1.origins.tavi\config.cfg<br>
 --- \dayz_1.origins.tavi\HiveExt.ini<br>
@@ -53,6 +60,8 @@ _welcomeMessage = format["Welcome to EPM Gamings's GB 500 #2 Server %1, Enjoy yo
 
 Edit this line.
 
-<b><u>Finaly</u></b>
-- Run build.bat (It will create the .pbo's)
-- Copy all the files from DEPLOY into your folder. (Make sure to maintain the same file structure)
+
+- Copy all the files from your git download into your folder. (Make sure to maintain the same file structure)
+- Install your PBO tool if you haven't already.
+- Use the PBO tool to pack the \@dayz_1.origins.tavi\addons\dayz_server folder.
+(NOTE:  You can also pack the folder in the MPMissions folder, but it isn't required)

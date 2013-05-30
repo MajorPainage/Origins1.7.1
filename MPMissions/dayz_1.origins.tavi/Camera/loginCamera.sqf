@@ -1,5 +1,5 @@
 private [ "_camera", "_welcomeMessage", "_camDistance" ];
-_welcomeMessage = format["Welcome to EPM Gamings's GB 500 #2 Server %1, Enjoy your stay!",format["%1", name player]];
+_welcomeMessage = format["Welcome to the .=QUACK=. Clans Origin Server %1, Enjoy your stay!",format["%1", name player]];
 _camDistance = 60;
  
 waitUntil {!isNil ("dayzLoginRecord")};

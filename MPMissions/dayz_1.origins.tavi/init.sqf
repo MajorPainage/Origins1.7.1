@@ -32,7 +32,7 @@ progressLoadingScreen 0.4;
 call compile preprocessFileLineNumbers "Debug\compiles.sqf";				//Compile regular functions
 progressLoadingScreen 1.0;
 
-player_spawn_2 = compile preprocessFileLineNumbers "Debug\player_spawn_2.sqf";
+player_spawn_2 = compile preprocessFileLineNumbers "debug\player_spawn_2.sqf";
 
 "filmic" setToneMappingParams [0.153, 0.357, 0.231, 0.1573, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
 
@@ -69,3 +69,4 @@ if (!isDedicated) then {
 	_nul = [] execVM "Camera\loginCamera.sqf";
 
 };
+[3,true,true,3] execFSM "core_time.fsm";

@@ -404,7 +404,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 7))
 				if (_damage >= 0.9) then {_color = "color='#ff0000'";}; //red
 				_cmpt = _cmpt + " Status: " + str(_damagePercent) + "%";
 				_string = format["<t %2>Repair%1</t>",_cmpt,_color]; //Repair - Part
-				_handle = dayz_myCursorTarget addAction [_string, "BASTARDS\repair.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
+				_handle = dayz_myCursorTarget addAction [_string, "\z\addons\dayz_code\actions\BASTARDS\repair.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
 				s_player_repairActions set [count s_player_repairActions,_handle];
 
 			};
@@ -413,7 +413,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 7))
 				_allFixed = false;
 				_color = "color='#00baff'"; //blue
 				_string = format["<t %2>Remove %1 part</t>",_cmpt,_color]; //Remove - Part
-				_handle = dayz_myCursorTarget addAction [_string, "BASTARDS\retake.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
+				_handle = dayz_myCursorTarget addAction [_string, "\z\addons\dayz_code\actions\BASTARDS\retake.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
 				s_player_repairActions set [count s_player_repairActions,_handle];
 			};
 					
@@ -435,7 +435,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 7))
 					_color = "color='#ff0000'";
 					_stname = format["str_%1",_st];
 					_string = format["<t %2>%1</t>", localize _stname,_color]; //Repair - Part
-					_handle = dayz_myCursorTarget addAction [_string, "BASTARDS\repair.sqf",[_vehicle,_part,_st], 0, false, true, "",""];
+					_handle = dayz_myCursorTarget addAction [_string, "\z\addons\dayz_code\actions\BASTARDS\repair.sqf",[_vehicle,_part,_st], 0, false, true, "",""];
 					s_player_repairActions set [count s_player_repairActions,_handle];
 				};
 			};
