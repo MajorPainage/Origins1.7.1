@@ -75,7 +75,7 @@ To enable auto refuelling:
 - Edit \MPMissions\dayz_1.origins.tavi\init.sqf
 - Look for:
 <pre>
-	//Remove the double slashes on the line belowe to enable auto refuelling
+	//Remove the double slashes on the line below to enable auto refuelling
 	//[] execVM "Scripts\kh_actions.sqf";
 </pre>
 - Remove the double slashes to enable the add-on, save and restart the server.
