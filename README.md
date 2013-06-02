@@ -65,3 +65,18 @@ Edit this line.
 - Install your PBO tool if you haven't already.
 - Use the PBO tool to pack the \@dayz_1.origins.tavi\addons\dayz_server folder.
 (NOTE:  You can also pack the folder in the MPMissions folder, but it isn't required)
+
+
+<u><b>Add-Ons</b></u>
+
+<b>Auto Refuelling<b>
+
+To enable auto refuelling:
+- Edit \MPMissions\dayz_1.origins.tavi\init.sqf
+- Look for:
+<pre>
+	//Remove the double slashes on the line belowe to enable auto refuelling
+	//[] execVM "Scripts\kh_actions.sqf";
+</pre>
+- Remove the double slashes to enable the add-on, save and restart the server.
+(NOTE:  Folders inside the \MPMissions\ folder don't have to be packed to .pbo format)
