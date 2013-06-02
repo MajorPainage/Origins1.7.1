@@ -70,7 +70,7 @@ if (!isDedicated) then {
 
 	//Remove the double slashes on the line below to enable auto refuelling
 	//[] execVM "Scripts\kh_actions.sqf";
-	
-	//Adjusts for 4hr day/night
-	[3,true,true,3] execFSM "core_time.fsm";
 };
+
+//Adjusts for 4hr day/night
+[3,true,true,3] execFSM "core_time.fsm";
