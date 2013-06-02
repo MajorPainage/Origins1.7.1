@@ -4,12 +4,14 @@ DayZ Origins community build
 All credit goes to Cortez for all the hard work to make this mod available.
 
 <u><b>Tools Required</b></u>
+============================
 
 - PBO tool which can be found in the tools folder.
 (PBO Manager is the better of the two)
 
 
 <u><b>Installing Database:</b></u>
+============================
 
 - You need to have MySQL version 5.5 and up. Work great on  5.5.31-0+wheezy1 (debian). Older version have problem importing the .SQL file
 - Import \sqlfile\1_dayz_origins.sql into your database
@@ -19,6 +21,7 @@ All credit goes to Cortez for all the hard work to make this mod available.
 
 
 <u><b>Installing Files:</b></u>
+============================
 
 - Install the latest OA Beta Patch (http://www.arma2.com/beta-patch.php)
 - Create a new folder copy the files from the OA folder into it. (This help retains your original files if you have to start over)
@@ -68,8 +71,9 @@ Edit this line.
 
 
 <u><b>Add-Ons</b></u>
+============================
 
-- <b>Auto Refuelling<b>
+<b>Auto Refuelling<b>
 
 To enable auto refuelling:
 - Edit \MPMissions\dayz_1.origins.tavi\init.sqf
