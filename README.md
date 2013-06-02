@@ -3,7 +3,7 @@ DayZ Origins community build
 
 All credit goes to Cortez for all the hard work to make this mod available.
 
-<u><b>Tools Required</b></u>
+<u><b><big><big>Tools Required</big></big></b></u>
 
 - PBO tool which can be found in the tools folder.
 (PBO Manager is the better of the two)
