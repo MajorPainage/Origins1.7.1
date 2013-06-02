@@ -80,3 +80,10 @@ To enable auto refuelling:
 </pre>
 - Remove the double slashes to enable the add-on, save and restart the server.
 (NOTE:  Folders inside the \MPMissions\ folder don't have to be packed to .pbo format)
+
+- <b>4hr Day/Night</b>
+
+Since we haven't been able to get 4hr day/night working properly, we are using a work around.
+Server is set to 'Static Time @ 14' which is 2 pm server time.  
+Changes are done in the HiveExt.cfg.  Restart your server every 8 hours.
+This should provide 2-6 day and 6 to 10 night.  Times may need tweaking for your preference.
