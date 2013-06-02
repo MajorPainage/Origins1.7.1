@@ -68,7 +68,7 @@ if (!isDedicated) then {
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
 	_nul = [] execVM "Camera\loginCamera.sqf";
 
-	//Remove the double slashes on the line belowe to enable auto refuelling
+	//Remove the double slashes on the line below to enable auto refuelling
 	//[] execVM "Scripts\kh_actions.sqf";
 };
 
