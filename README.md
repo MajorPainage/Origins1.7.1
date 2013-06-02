@@ -69,7 +69,7 @@ Edit this line.
 
 <u><b>Add-Ons</b></u>
 
-<b>Auto Refuelling<b>
+- <b>Auto Refuelling<b>
 
 To enable auto refuelling:
 - Edit \MPMissions\dayz_1.origins.tavi\init.sqf
