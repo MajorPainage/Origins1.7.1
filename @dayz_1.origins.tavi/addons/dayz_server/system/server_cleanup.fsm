@@ -102,16 +102,6 @@ class FSM
           action=/*%FSM<ACTION""">*/"_lastDeadCheck = time;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
-        /*%FSM<LINK "time_sync">*/
-        class time_sync
-        {
-          priority = 3.000000;
-          to="sync_the_time";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"((time - _lastTimeSync) > 60)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_lastTimeSync = time;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
         /*%FSM<LINK "too_many_dead">*/
         class too_many_dead
         {
