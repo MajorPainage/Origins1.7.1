@@ -1032,7 +1032,6 @@ DECLARE i INT DEFAULT 1;
 
 
 CALL pCleanup();
-CALL pMoveDead();
 
 SELECT COUNT(*) 
 	INTO iNumVehExisting
