@@ -243,7 +243,7 @@ dayz_maxAnimals = 25;
 DAYZ_agentnumber = 0;
 dayz_animalDistance = 800;
 dayz_zSpawnDistance = 1000;
-dayz_maxLocalZombies = 2000;
+dayz_maxLocalZombies = 200;
 dayz_spawnPos = getPosATL player;
 
 
