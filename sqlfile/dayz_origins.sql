@@ -171,6 +171,8 @@ INSERT INTO `object_classes` VALUES ('ori_vil_truck_civ1', '0.7', '4', '0', '[[\
 INSERT INTO `object_classes` VALUES ('ori_vil_truck_civ', '0.7', '4', '0', '[[\"sklo_p\",1],[\"sklo_p1\",1],[\"sklo_l1\",1],[\"levy predni tlumic\",1],[\"levy zadni tlumic\",1],[\"pravy zadni tlumic\",1],[\"karoserie\",0.9],[\"palivo\",0.6],[\"motor\",0.2],[\"front_plow\",1],[\"wheel_guards\",1],[\"window_guards\",1],[\"windshield_guard\",1]]');
 INSERT INTO `object_classes` VALUES ('ori_vil_lublin_truck', '0.7', '4', '0', '[[\"sklo_p\",1],[\"sklo_p1\",1],[\"sklo_l1\",1],[\"levy predni tlumic\",1],[\"levy zadni tlumic\",0.2],[\"pravy predni tlumic\",1],[\"pravy zadni tlumic\",1],[\"karoserie\",0.7],[\"palivo\",0.2],[\"sklo predni P\",1],[\"motor\",0.7],[\"front_plow\",1],[\"wheel_guards\",1],[\"window_guards\",1],[\"windshield_guard\",1]]');
 INSERT INTO `object_classes` VALUES ('rth_amphicar', '0.7', '15', '0.05', '[[\"LF_hit\",1],[\"LM_hit\",1],[\"LB_hit\",0.4],[\"RF_hit\",1],[\"RM_hit\",1],[\"RB_hit\",1],[\"motor\",0.8]]');
+INSERT INTO `object_classes` VALUES ('origins_bathmobile', '0.7', '15', '0.05', '[[\"motor\",0.8],[\"karoserie\",1],[\"palivo\",0.8],[\"wheel_1_1_steering\",1],[\"wheel_2_1_steering\",1],[\"wheel_1_2_steering\",1],[\"wheel_2_2_steering\",1],[\"sklo predni P\",1],[\"sklo predni L\",1],[\"glass1\",1],[\"glass2\",1],[\"glass3\",1]]');
+
 
 -- ----------------------------
 -- Table structure for `object_data`
