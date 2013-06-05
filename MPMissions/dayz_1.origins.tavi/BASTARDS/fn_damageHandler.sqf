@@ -76,13 +76,16 @@ if (_damage > 0.4) then {
 		case 1: {_scale = _scale + 200};
 		case 2: {_scale = _scale + 200};
 	};
-	if (_unit == player) then {
-		//Cause blood loss
-		//Log Damage
-		if (_weapon == "DMR") then { _scale = _scale / 1.4; _damage = _damage / 1.6; };
-		//diag_log ("DAMAGE: player hit by " + typeOf _source + " in " + _hit + " with " + _ammo + " for " + str(_damage) + " scaled " + str(_damage * _scale) + "_type=" + str(_type) + "_scale=" + str(_scale) + "_weapon=" + str(_weapon));
-		r_player_blood = r_player_blood - (_damage * _scale);
+	
+	
+	/* if (_unit == player) then {
+	//Cause blood loss
+	//Log Damage
+	if (_weapon == "DMR") then { _scale = _scale / 1.4; _damage = _damage / 1.6; };
+	diag_log ("DAMAGE: player hit by " + typeOf _source + " in " + _hit + " with " + _ammo + " for " + str(_damage) + " scaled " + str(_damage * _scale) + "_type=" + str(_type) + "_scale=" + str(_scale) + "_weapon=" + str(_weapon));
+	r_player_blood = r_player_blood - (_damage * _scale);
 	};
+	*/
 };
 
 //Record Damage to Minor parts (legs, arms)
