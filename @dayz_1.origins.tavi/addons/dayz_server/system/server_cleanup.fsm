@@ -102,6 +102,16 @@ class FSM
           action=/*%FSM<ACTION""">*/"_lastDeadCheck = time;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
+        /*%FSM<LINK "time_sync">*/
+        class time_sync
+        {
+          priority = 3.000000;
+          to="sync_the_time";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"((time - _lastTimeSync) > 60)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_lastTimeSync = time;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
         /*%FSM<LINK "too_many_dead">*/
         class too_many_dead
         {
@@ -343,6 +353,57 @@ class FSM
     {
       name = "cleanup_objects";
       init = /*%FSM<STATEINIT""">*/"_missionObjsW = allMissionObjects ""WeaponHolder"" + allMissionObjects ""#dynamicsound"" + allMissionObjects ""WeaponHolder_ItemRestTent"" + allMissionObjects ""WeaponHolder_ItemTent"" + allMissionObjects ""WeaponHolder_ItemHatchet"" + allMissionObjects ""WeaponHolder_PartGeneric"" + allMissionObjects ""WeaponHolder_ItemJerrycanB"" + allMissionObjects ""WeaponHolder_ItemJerrycan"" + allMissionObjects ""WeaponHolder_PartEngine"" + allMissionObjects ""WeaponHolder_PartFueltank"" + allMissionObjects ""WeaponHolder_PartGlass"" + allMissionObjects ""WeaponHolder_PartWheel"" + allMissionObjects ""WeaponHolder_PartVRotor"" + allMissionObjects ""DZ_Patrol_Pack_EP1"" + allMissionObjects ""DZ_CivilBackpack_EP1"" + allMissionObjects ""DZ_Assault_Pack_EP1"" + allMissionObjects ""CZ_VestPouch_EP1"" + allMissionObjects ""DZ_ALICE_Pack_EP1"" + allMissionObjects ""DZ_Backpack_EP1"" + allMissionObjects ""WeaponHolder_PartScrap"" + allMissionObjects ""WeaponHolder_ItemPickaxe"" + allMissionObjects ""WeaponHolder_ItemCeMix"" + allMissionObjects ""O_MegaPack_1"" + allMissionObjects ""O_TravelerPack_1"";" \n
+       "_qty = count _missionObjsW;" \n
+       "diag_log (""CLEANUP: PERFORMING ITEM CLEANUP: TOTAL "" + str(_qty) + "" LOOT BAGS TIME="" + str(time));" \n
+       "_delQty = 0;" \n
+       "_keepme = false;" \n
+       "_keepmetoo = 0;" \n
+       "_itemNumer =0;" \n
+       "_itemNumerP =0;" \n
+       "_itemNumerHP =0;" \n
+       "_nearby = 0;" \n
+       "       " \n
+       "{" \n
+       "		   _keep = _x getVariable [""permaLoot"",false];" \n
+       "		   _keept = _x getVariable [""RepLoot"",0];" \n
+       "		if (_keept!=0) then {" \n
+       "		   	//diag_log (""RepLoot="" + str(_keept));" \n
+       "			_keepmetoo = (_keept - time);" \n
+       "			if (_keepmetoo>0) then {" \n
+       "				_keepme = true;" \n
+       "				//diag_log (""_keepme = true"");" \n
+       "			} else {" \n
+       "				_keepme = false;" \n
+       "				//diag_log (""_keepme = false"");" \n
+       "			};" \n
+       "		};" \n
+       "      //_nearby = {isPlayer _x} count (_x nearEntities [[""BanditW1_DZ"",""SurvivorW2_DZ"",""Bandit1_DZ"",""Survivor2_DZ"",""Survivor2_1DZ"",""Survivor2_2DZ"",""Survivor2_3DZ"",""Survivor3_DZ"",""Survivor4_DZ"",""Survivor4_1DZ"",""Survivor4_2DZ"",""Survivor4_3DZ"",""Survivor8_DZ"",""Survivor8_1DZ"",""Survivor8_2DZ"",""Survivor8_3DZ"",""Bandit_S_DZ"",""Bandit1_1DZ"",""Bandit1_2DZ"",""Bandit1_3DZ"",""Bandit1_3_1DZ"",""Bandit1_3_2DZ"",""Bandit2_1DZ"",""Bandit2_2DZ"",""Bandit2_3DZ"",""Bandit2_4DZ"",""Bandit2_5DZ"",""Bandit3_1"",""Hero1_1DZ"",""Hero1_2DZ"",""Hero1_3DZ"",""Hero1_4DZ"",""Hero1_5DZ"",""Hero1_6DZ"",""Hero1_7DZ"",""Hero2_1DZ"",""Hero2_2DZ"",""Hero2_3DZ"",""Hero2_4DZ"",""Hero2_5DZ"",""Hero3_1DZ"",""Hero3_2DZ"",""Hero3_3DZ"",""Hero3_4DZ"",""Hero3_5DZ"",""Hero3_6DZ"",""Hero2_10DZ"",""Sniper1_DZ""], 300]);" \n
+       "	_nearby2 = (getposATL _x) nearEntities [[""ori_vil_woman_survivor_1"",""ori_vil_woman_survivor_2"",""ori_vil_woman_survivor_3"",""ori_vil_woman_survivor_4"",""ori_vil_woman_survivor_5"",""ori_vil_woman_survivor_6"",""ori_vil_woman_bandit_1"",""ori_vil_woman_bandit_2"",""ori_vil_woman_bandit_3"",""ori_vil_woman_bandit_4"",""ori_vil_woman_bandit_5"",""ori_vil_woman_bandit_6"",""ori_vil_woman_hero_1"",""ori_vil_woman_hero_2"",""ori_vil_woman_hero_3"",""ori_vil_woman_hero_4"",""ori_vil_woman_hero_5"",""ori_vil_woman_hero_6"",""SurvivorW2_DZ"",""Bandit1_DZ"",""Survivor2_DZ"",""Survivor2_1DZ"",""Survivor2_2DZ"",""Survivor2_3DZ"",""Survivor3_DZ"",""Survivor4_DZ"",""Survivor4_1DZ"",""Survivor4_2DZ"",""Survivor4_3DZ"",""Survivor8_DZ"",""Survivor8_1DZ"",""Survivor8_2DZ"",""Survivor8_3DZ"",""Bandit_S_DZ"",""Bandit1_1DZ"",""Bandit1_2DZ"",""Bandit1_3DZ"",""Bandit1_3_1DZ"",""Bandit1_3_2DZ"",""Bandit2_1DZ"",""Bandit2_2DZ"",""Bandit2_3DZ"",""Bandit2_4DZ"",""Bandit2_5DZ"",""Bandit3_1"",""Hero1_1DZ"",""Hero1_2DZ"",""Hero1_3DZ"",""Hero1_4DZ"",""Hero1_5DZ"",""Hero1_6DZ"",""Hero1_7DZ"",""Hero2_1DZ"",""Hero2_2DZ"",""Hero2_3DZ"",""Hero2_4DZ"",""Hero2_5DZ"",""Hero3_1DZ"",""Hero3_2DZ"",""Hero3_3DZ"",""Hero3_4DZ"",""Hero3_5DZ"",""Hero3_6DZ"",""Hero2_10DZ"",""Sniper1_DZ""],200];" \n
+       "	   _nearby = count _nearby2;   " \n
+       "	//diag_log format [""%3. _nearby =%1, typeOf=%2"", _nearby,(typeOf _x),_itemNumer];" \n
+       "		if ( (!_keep) && (_nearby == 0) && (!_keepme) ) then {" \n
+       "			       " \n
+       "                    clearVehicleInit _x; //let's clear all PICs" \n
+       "                    deleteVehicle _x;" \n
+       "                    _x = nil; //this seems clean even more :) thx Tansien" \n
+       "                    //deleteVehicle _x;" \n
+       "			_delQty = _delQty + 1;" \n
+       "		};" \n
+       "	if (_nearby != 0) then {" \n
+       "		_itemNumer =_itemNumer + 1;" \n
+       "	};" \n
+       "	if (_keepme) then {" \n
+       "		_itemNumerP =_itemNumerP + 1;" \n
+       "	};" \n
+       "	if (_keep) then {" \n
+       "		_itemNumerHP =_itemNumerHP + 1;" \n
+       "	};" \n
+       "} forEach _missionObjsW;" \n
+       "diag_log format [""CLEANUP: _itemNumer = %1, _itemNumerP=%2, _itemNumerHP=%3"",_itemNumer,_itemNumerP,_itemNumerHP];" \n
+       "if (_delQty > 0) then {" \n
+       "	diag_log (""CLEANUP: DELETED "" + str(_delQty) + "" LOOT BAGS, TOTAL "" + str(_qty) + "", TIME end="" + str(time));" \n
+       "};" \n
+       "       " \n
        "_delQtyAnimal = 0;" \n
        "_animaltype = [];" \n
        "_delQtyAnimalR = 0;" \n
