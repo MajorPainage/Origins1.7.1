@@ -86,7 +86,7 @@ To enable auto refuelling:
 
 <b>DMR Damage Scaling Removed</b>
 
-Edit file: MPMissions/dayz_1.origins.tavi/BASTARDS/fn_damageHandler.sqf
+Edit file: MPMissions/dayz_1.origins.tavi/BASTARDS/fn_damageHandler.sqf<br>
 Look at lines 81-88.
 
 If you would like DMR's to have the same damage as they would in cherno
