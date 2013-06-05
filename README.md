@@ -69,7 +69,7 @@ Edit this line.
 (NOTE:  You can also pack the folder in the MPMissions folder, but it isn't required)
 
 
-<u><b>Add-Ons</b></u>
+<u><b>Optional Add-Ons</b></u>
 ============================
 
 <b>Auto Refuelling<b>
@@ -83,3 +83,13 @@ To enable auto refuelling:
 </pre>
 - Remove the double slashes to enable the add-on, save and restart the server.
 (NOTE:  Folders inside the \MPMissions\ folder don't have to be packed to .pbo format)
+
+<b>DMR Damage Scaling Removed</b>
+
+Edit file: MPMissions/dayz_1.origins.tavi/BASTARDS/fn_damageHandler.sqf
+Look at lines 81-88.
+
+If you would like DMR's to have the same damage as they would in cherno
+then keep or delete lines that are commented out starting with  "  /* if
+(_unit == player) then { "  if you want the new style DMR damage they
+uncomment out the code.
