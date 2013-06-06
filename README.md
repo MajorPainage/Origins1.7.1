@@ -36,22 +36,8 @@ All credit goes to Cortez for all the hard work to make this mod available.
 
 <u><b>Editing player_spawn_2.sqf:</b></u>
 
-Look for:
-<pre>
-//Debug Info
-            _headShots =    player getVariable["headShots",0];
-            _kills =                player getVariable["zombieKills",0];
-            _killsH =               player getVariable["humanKills",0];
-            _killsB =               player getVariable["banditKills",0];
-            _humanity =             player getVariable["humanity",0];
-            _zombies =              count entities "zZombie_Base";
-            _zombiesA =     {alive _x} count entities "zZombie_Base";
+Look for 'Visit: www.epm-gaming.co.uk' on line 361, 385, and 416, and change it to your own website.
 
-                    hintSilent parseText format ["
-            <t size='1.15' font='Bitstream' color='#5882FA'>Visit: www.epm-gaming.co.uk</t><br/><br/>
-</pre>
-    
-Edit last line.
 
 <u><b>Editing loginCamera.sqf:</b></u>
 
