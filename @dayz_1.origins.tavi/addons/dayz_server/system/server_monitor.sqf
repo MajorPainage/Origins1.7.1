@@ -513,7 +513,7 @@ _weights = [];
 _weights = [_itemType,_itemChance] call fnc_buildWeightedArray;
 
 
-for "_x" from 1 to 5 do {
+for "_x" from 1 to 8 do {
 _position = [getMarkerPos "center",0,10000,10,0,20,1] call BIS_fnc_findSafePos;
 _veh = createVehicle ["UH1Wreck_DZ",_position, [], 0, "CAN_COLLIDE"];
 diag_log format["DEBUG: heli crashed: %1 %2",_veh,_position];
@@ -540,7 +540,6 @@ _x setVariable ["permaLoot",true];
 };
 };
 diag_log "DEBUG: heli chrashed spawn finished invc=" + str(count _newinvhouse);
-
 
 
 
@@ -749,7 +748,6 @@ diag_log("Taviana Guards spawn Group g01g end");
 };
 
 
-
 start_civilian1c = {
 private["_spawnTaviGroupLeader1c","_AISgroup1c","_spawnAIS1c","_rndCount1c","_rnd10","_position1c","_modelarray1c","_startpos1c","_unit10","_units10","_id101","_wp1c1","_wp1c2","_wp1c3"];
 
@@ -876,7 +874,6 @@ _spawnAIS1c disableConversation true;
 diag_log("DEBUG: Spawning " + str(_rndCount1c) + " Taviana Civilian from Group 1c at position " + str(_position1c));
 diag_log("Taviana Civilian spawn Group 1c end");
 };
-
 
 start_guardsg13g = {
 private["_spawnTaviGroupLeaderg13g","_AISgroupg13g","_x10","_rndCountg13g","_rnd10","_positiong13g","_modelarrayg13g","_startposg13g","_unit10","_units10","_id101"];
@@ -1095,211 +1092,6 @@ diag_log("Taviana Guards spawn Group g13g end");
 };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 raid_helis = {
 
 private["_AISgroupg14g","_modelarrayg14g","_startposg14g","_position","_positiong14g","_rndCountg14g","_rnd","_bodynameig14g","_soldermodelg14g","_spawnTaviGroupLeaderg14g","_TavianaSquadg14g","_object1AI1","_wp14p1","_wp14p2","_wp14p3","_spawnAISg14g","_object1AI1"];
@@ -1309,16 +1101,16 @@ private["_AISgroupg14g","_modelarrayg14g","_startposg14g","_position","_position
 east setFriend [west,0];
 east setFriend [sideLogic,1];
 
-_object1AI1 = createVehicle ["UH1H_DZ", [22924.3,19469.2,0], [], 0, "CAN_COLLIDE"];
+_object1AI1 = createVehicle ["MH60S", [22924.3,19469.2,0], [], 0, "CAN_COLLIDE"];
 _object1AI1 setvelocity [0,0,1];
 _object1AI1 setFuel 1;
 
 
-_object2AI2 = createVehicle ["UH1H_DZ", [22907.7,19524.1,0], [], 0, "CAN_COLLIDE"];
+_object2AI2 = createVehicle ["MH60S", [22907.7,19524.1,0], [], 0, "CAN_COLLIDE"];
 _object2AI2 setvelocity [0,0,1];
 _object2AI2 setFuel 1;
 
-_object3AI3 = createVehicle ["UH1H_DZ", [22946.9,19574.9,0], [], 0, "CAN_COLLIDE"];
+_object3AI3 = createVehicle ["MH60S", [22946.9,19574.9,0], [], 0, "CAN_COLLIDE"];
 _object3AI3 setvelocity [0,0,1];
 _object3AI3 setFuel 1;
 
@@ -1718,29 +1510,11 @@ diag_log("Taviana Guards spawn Group g14g end");
 
 
 
-
 diag_log "Armory start";
 
 _io1 = [] call start_guardsg01g;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 _iog13g = [] call start_guardsg13g;
-
 _iog14g = [] call raid_helis;
-
-
 _io1c = [] call start_civilian1c; 
 
 
