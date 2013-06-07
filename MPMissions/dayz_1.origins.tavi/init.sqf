@@ -73,4 +73,4 @@ if (!isDedicated) then {
 };
 
 //Adjusts for 4hr day/night
-[3,true,true,3] execFSM "core_time.fsm";
+[3,true,true] execFSM "core_time.fsm";
