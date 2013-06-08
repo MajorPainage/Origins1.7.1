@@ -55,8 +55,21 @@ Edit this line.
 (NOTE:  You can also pack the folder in the MPMissions folder, but it isn't required)
 
 
-<u><b>Optional Add-Ons</b></u>
+<u><b>Optional How-Tos</b></u>
 ============================
+
+<b>Adjusting Day/Night Time<b>
+
+- Edit \MPMissions\dayz_1.origins.tavi\init.sqf
+- Look for:
+<pre>
+[3,true,true] execFSM "core_time.fsm";
+</pre>
+- Default is currently 4hr day/night.
+- Other examples:
+--- [4,true,true] execFSM "core_time.fsm"; (3hr day/night)
+--- [3,true,true,12] execFSM "core_time.fsm"; (4hr day / 1 hr night)
+
 
 <b>Auto Refuelling<b>
 
@@ -72,10 +85,33 @@ To enable auto refuelling:
 
 <b>DMR Damage Scaling Removed</b>
 
-Edit file: MPMissions/dayz_1.origins.tavi/BASTARDS/fn_damageHandler.sqf<br>
-Look at lines 81-88.
-
-If you would like DMR's to have the same damage as they would in cherno
+- Edit file: MPMissions/dayz_1.origins.tavi/BASTARDS/fn_damageHandler.sqf<br>
+- Look at lines 81-88.
+-If you would like DMR's to have the same damage as they would in cherno
 then keep or delete lines that are commented out starting with  "  /* if
 (_unit == player) then { "  if you want the new style DMR damage they
 uncomment out the code.
+
+<b>Increasing/Decreasing Zombies</b>
+
+- Edit player_spawnCheck inside the MPMission folder and look for:
+<pre>
+switch (_nearbytype) do {
+    default {
+        _maxZombies = 10;
+    };
+    case "NameLocal": {
+        _maxZombies = 10;
+    };
+    case "NameVillage": {
+        _maxZombies = 15;
+    };
+    case "NameCity": {
+        _maxZombies = 20;
+    };
+    case "NameCityCapital": {
+        _maxZombies = 20;
+    };
+};
+</pre>
+- Edit the values to your preference.
