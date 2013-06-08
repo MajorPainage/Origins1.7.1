@@ -94,7 +94,7 @@ uncomment out the code.
 
 <b>Increasing/Decreasing Zombies</b>
 
-- Edit player_spawnCheck inside the MPMission folder and look for:
+- Edit \MPMissions\dayz_1.origins.tavi\BASTARDS\player_spawnCheck look for:
 <pre>
 switch (_nearbytype) do {
     default {
