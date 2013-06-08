@@ -66,10 +66,10 @@ Edit this line.
 [3,true,true] execFSM "core_time.fsm";
 </pre>
 - Default is currently 4hr day/night.
-- Other examples:
---- [4,true,true] execFSM "core_time.fsm"; (3hr day/night)
---- [3,true,true,12] execFSM "core_time.fsm"; (4hr day / 1 hr night)
-
+- Other examples:<br>
+--- [4,true,true] execFSM "core_time.fsm"; (3hr day/night)<br>
+--- [3,true,true,12] execFSM "core_time.fsm"; (4hr day / 1 hr night)<br>
+- To disable completely, just add a double slash to the front of the line '//'
 
 <b>Auto Refuelling<b>
 
