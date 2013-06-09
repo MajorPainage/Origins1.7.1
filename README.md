@@ -7,13 +7,14 @@ All credit goes to Cortez for all the hard work to make this mod available.
 ============================
 
 - PBO tool which can be found in the tools folder.
-(PBO Manager is the better of the two)
 
 
 <u><b>Installing Database:</b></u>
 ============================
 
-- You need to have MySQL version 5.5 and up. Work great on  5.5.31-0+wheezy1 (debian). Older version have problem importing the .SQL file
+- You need to have MySQL version 5.5 and up. 
+(Work great on  5.5.31-0+wheezy1 (debian). Older version have problem importing the .SQL file)
+- For Windows servers, WAMP works pretty good.  http://www.wampserver.com/en/
 - Import \sqlfile\dayz_origins.sql into your database
 
 (NOTE: If your having issues installing the functions, and get a message saying you don't have permission to install, you must install the functions as a 'root' user)
