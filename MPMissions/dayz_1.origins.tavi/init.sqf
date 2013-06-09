@@ -73,4 +73,4 @@ if (!isDedicated) then {
 };
 
 //Adjust here for time of day/night (Current setting is 3hr day/night)
-[4,true,true] execFSM "core_time.fsm";
+[4,false,true] execFSM "core_time.fsm";
