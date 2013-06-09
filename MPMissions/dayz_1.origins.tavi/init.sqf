@@ -72,5 +72,5 @@ if (!isDedicated) then {
 	//[] execVM "Scripts\kh_actions.sqf";
 };
 
-//Adjusts for 4hr day/night
-[3,true,true] execFSM "core_time.fsm";
+//Adjust here for time of day/night (Current setting is 3hr day/night)
+[4,true,true] execFSM "core_time.fsm";
