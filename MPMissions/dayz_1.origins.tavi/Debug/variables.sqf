@@ -239,7 +239,7 @@ dayzHideBody = objNull;
 //DayZ settings
 dayz_dawn = 6;
 dayz_dusk = 18;
-dayz_maxAnimals = 25;
+dayz_maxAnimals = 50;
 DAYZ_agentnumber = 0;
 dayz_animalDistance = 800;
 dayz_zSpawnDistance = 1000;
