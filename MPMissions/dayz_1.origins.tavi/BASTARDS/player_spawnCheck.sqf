@@ -2,7 +2,7 @@ private ["_isAir","_inVehicle","_dateNow","_maxZombies","_dist","_age","_radius"
 _isAir = vehicle player iskindof "Air";
 _inVehicle = (vehicle player != player);
 _dateNow = (DateToNumber date);
-_maxZombies = 20;
+_maxZombies = 25;
 _dist = [22600,19600,0] distance player;
 if ( _dist < 1000 ) exitWith {};
 _age = -1;
@@ -36,19 +36,19 @@ _nearby = nearestObjects [_position, ["building"], _radius];
 
 switch (_nearbytype) do {
 	default {
-		_maxZombies = 10;
-	};
-	case "NameLocal": {
-		_maxZombies = 10;
-	};
-	case "NameVillage": {
 		_maxZombies = 15;
 	};
-	case "NameCity": {
+	case "NameLocal": {
+		_maxZombies = 15;
+	};
+	case "NameVillage": {
 		_maxZombies = 20;
 	};
+	case "NameCity": {
+		_maxZombies = 25;
+	};
 	case "NameCityCapital": {
-		_maxZombies = 20;
+		_maxZombies = 25;
 	};
 };
 
