@@ -63,9 +63,9 @@ Edit this line.
 - Edit \MPMissions\dayz_1.origins.tavi\init.sqf
 - Look for:
 <pre>
-[3,true,true] execFSM "core_time.fsm";
+[4,true,true] execFSM "core_time.fsm";
 </pre>
-- Default is currently 4hr day/night.
+- Default is currently 3hr day/night.
 - Other examples:<br>
 --- [4,true,true] execFSM "core_time.fsm"; (3hr day/night)<br>
 --- [3,true,true,12] execFSM "core_time.fsm"; (4hr day / 1 hr night)<br>
@@ -95,6 +95,11 @@ uncomment out the code.
 <b>Increasing/Decreasing Zombies</b>
 
 - Edit \MPMissions\dayz_1.origins.tavi\BASTARDS\player_spawnCheck look for:
+- On line 5:
+<pre>
+_maxZombies = 25;
+</pre>
+Further down the page:
 <pre>
 switch (_nearbytype) do {
     default {
