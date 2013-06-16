@@ -7,6 +7,7 @@ All credit goes to Cortez for all the hard work to make this mod available.
 ============================
 
 - PBO tool which can be found in the tools folder.
+(NOTE: Make sure before you pack to the .pbo, you set the prefix to "z\addons\dayz_server")
 
 
 <u><b>Installing Database:</b></u>
