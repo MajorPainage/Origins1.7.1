@@ -6,7 +6,7 @@ All credit goes to Cortez for all the hard work to make this mod available.
 <u><b>Tools Required</b></u>
 ============================
 
-- PBO tool which can be found in the tools folder.
+- PBO tool which can be found in the tools folder.<br>
 (NOTE: Make sure before you pack to the .pbo, you set the prefix to "z\addons\dayz_server")
 
 
