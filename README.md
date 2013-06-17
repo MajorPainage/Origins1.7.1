@@ -14,7 +14,7 @@ All credit goes to Cortez for all the hard work to make this mod available.
 - Right click dayz_server folder and select PBO Manager>Pack into "dayz_server.pbo"
 - After packing the folder, click the green icon on PboManager and open the "dayz_server.pbo" you just packed.
 - Next click on the blue icon to check the file properties.
-- If you see "prefix" and "z\addons\dayz_server\", your ok.
+- If you see "prefix" and "z\addons\dayz_server", your ok.
 - If you don't see it, your still ok, right click the white area and select "Add".
 - Under property, add "prefix", and under value, add "z\addons\dayz_server" (without the quotes)
 - Close the PboManager and upload the file if you didn't pack it on the server.
